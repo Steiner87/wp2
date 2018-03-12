@@ -1,3 +1,151 @@
-h1 {
-    color: brown;
+#wrapper {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 60px;
+}
+
+.header__top {
+    display: grid;
+    grid-template-columns: 130px 184px;
+    justify-content: space-between;
+}
+
+#header {
+    padding-top: 31px;
+}
+
+.header {
+    &__left {
+        // display: grid;
+    }
+    &__right {
+        display: inline-grid;
+        grid-template-columns: 100px 49px;
+        justify-content: space-between;
+    }
+}
+
+.singup {
+    display: grid;
+}
+
+.card {
+    display: grid;
+    text-align: right;
+}
+
+.header__bottom {
+    display: grid;
+    grid-template-columns: minmax(550px, 915px) 120px;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    // width: 100%;
+    padding-left: 0;
+    justify-content: space-between;
+    & li {
+        display: block;
+    }
+}
+
+form {
+    padding-top: 15px;
+}
+
+#search {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.promoblock {
+    width: 100%;
+    display: block;
+}
+
+#main {
+    & h1 {
+        text-align: center;
+    }
+    & h2 {
+        text-align: center;
+    }
+}
+
+.arrivals,
+.baners {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    list-style: none;
+    & li {
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+#footer {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+.footer-top {
+    width: 100%;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-top__left {
+    width: 50%;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    justify-items: start;
+    & ul {
+        display: block;
+        // width: 265px;
+        list-style: none;
+        padding-left: 0px;
+    }
+}
+
+.footer-top__right {
+    padding-left: 59px;
+    width: 50%;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+.quik_links {
+    width: 100%;
+}
+
+.castomer_care {
+    width: 100%;
+}
+
+.questions {
+    width: 100%;
+}
+
+.order_by_phone {
+    width: 100%;
+}
+
+.footer-top__right>p {
+    display: block;
+    width: 100%;
+}
+
+.footer-bottom {
+    // width: 100%;
+}
+
+.footer-bottom__right ul li {
+    display: inline-block;
 }
