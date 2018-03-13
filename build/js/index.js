@@ -1,1 +1,1 @@
-webpackJsonp([0],{3:function(n,e){},6:function(n,e,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var i=o(3),t=(o.n(i),o(0)),u=(o.n(t),o(1)),c=o.i(u.a)(["Main","About"],"menu");document.body.appendChild(c),console.log("in index.js")}},[6]);
+webpackJsonp([0],[function(n,e){},function(n,e){},function(n,e,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var c=o(0),i=(o.n(c),o(1));o.n(i);console.log("in index.js")}],[2]);

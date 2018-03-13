@@ -4,11 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> 
-      <Index>page</Index>
-    </title>
-  <link href="./css/common.css" rel="stylesheet"><link href="./css/index.css" rel="stylesheet"></head>
+    <title>index page</title>
+  <link href="./css/index.css" rel="stylesheet"></head>
   <body>
-    <h1>Main page</h1><img src="images/webpack.svg" width="100" alt="">
+    <div id="wrapper">
+      <header id="header">
+        <div class="header__top">
+          <div class="header__left">Template</div>
+          <div class="header__right">
+            <div class="singup">E-mail sing up</div>
+            <div class="card">Bag</div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <nav>
+            <ul class="menu">
+              <li>Women</li>
+              <li>Men</li>
+              <li>Handbags</li>
+              <li>Accessiories</li>
+              <li>Sale</li>
+              <li>New Arrivals</li>
+              <li>Clearance</li>
+              <li>Store Locator</li>
+            </ul>
+          </nav>
+          <form action="#" method="get">
+            <input type="text" name="search" id="search">
+          </form>
+        </div>
+      </header>
+      <main id="main"><img class="promoblock" src="./src/pages/index/promo.jpg" alt="">
+        <ul class="baners">
+          <li><img src="./src/pages/index/images/nike.jpg" alt=""></li>
+          <li><img src="./src/pages/index/images/05.jpg" alt=""></li>
+          <li>
+            <h2>Caps & Hats</h2>
+            <p>Sale -50%</p>
+          </li>
+        </ul>
+        <h1>New arrivals</h1>
+        <ul class="arrivals">
+          <li><img src="./src/pages/index/images/01.jpg" alt="">
+            <p>Straight Leg Jeans</p>
+            <p>$55.00</p>
+          </li>
+          <li> <img src="./src/pages/index/images/02.jpg" alt="">
+            <p>Straight Leg Jeans</p>
+            <p>$55.00</p>
+          </li>
+          <li><img src="./src/pages/index/images/03.jpg" alt="">
+            <p>Straight Leg Jeans</p>
+            <p>$55.00</p>
+          </li>
+          <li><img src="./src/pages/index/images/04.jpg" alt="">
+            <p>Straight Leg Jeans</p>
+            <p>$55.00</p>
+          </li>
+        </ul>
+        <h2>All arivals</h2>
+      </main>
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="footer-top__left">
+            <div class="quik_links">
+              <h4>Quick links</h4>
+              <ul>
+                <li>Store locator</li>
+                <li>Gift cards</li>
+                <li>Size guide</li>
+                <li>About us</li>
+                <li>Support</li>
+              </ul>
+            </div>
+            <div class="castomer_care">
+              <h4>Castomer care</h4>
+              <ul>              
+                <li>Store locator</li>
+                <li>Gift cards</li>
+                <li>Size guide</li>
+                <li>About us</li>
+                <li>Support</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-top__right">
+            <div class="questions"> 
+              <h4>Questions</h4>
+              <p>Tweet us @template</p>
+            </div>
+            <div class="order_by_phone"> 
+              <h4>Order by phone</h4>
+              <p>8-800-409-47-12</p>
+            </div>
+            <p class="textblock">We have our own delivery service which operates in 23 major Eur </p>
+          </div>
+        </div>
+      </footer>
+    </div>
   <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script></body>
 </html>

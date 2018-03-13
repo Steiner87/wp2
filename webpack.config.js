@@ -9,6 +9,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const extractCSS = require('./webpack/css.extract');
 const uglifyJS = require('./webpack/js.uglify');
 const images = require('./webpack/images');
+const postcss = require('./webpack/postcss');
+const babel = require('./webpack/babel');
+const autoprefixer = require('autoprefixer');
 
 const PATHS = {
     src: path.join(__dirname, 'src'),
@@ -37,7 +40,7 @@ const common = merge([{
             // }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'common'
-            })
+            }),
         ],
     },
     pug(),
@@ -57,7 +60,8 @@ module.exports = function(env) {
             common,
             devserver(),
             sass(),
-            css()
+            css(),
+            postcss(),
         ])
     }
 };
