@@ -66,19 +66,17 @@ form {
     text-align: center; }
 
 #footer {
-  display: flex;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between; }
+  padding-bottom: 10px; }
 
 .footer-top {
-  width: 100%;
-  display: flex;
-  grid-template-columns: 1fr 1fr; }
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+  grid-template-areas: "header1 header2"; }
 
 .footer-top__left {
-  width: 50%;
-  display: flex;
-  grid-template-columns: 1fr 1fr;
+  grid-area: header1;
+  display: grid;
+  grid-template: 1fr/ 1fr 1fr;
   justify-content: space-between;
   justify-items: start; }
   .footer-top__left ul {
@@ -87,11 +85,12 @@ form {
     padding-left: 0px; }
 
 .footer-top__right {
+  grid-area: header2;
   padding-left: 59px;
-  width: 50%;
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: space-between; }
+  grid-template-rows: auto;
+  grid-template-areas: "header1 header2" "main main" "footer footer"; }
 
 .quik_links {
   width: 100%; }
@@ -100,17 +99,44 @@ form {
   width: 100%; }
 
 .questions {
+  grid-area: header1;
   width: 100%; }
 
 .order_by_phone {
+  grid-area: header2;
   width: 100%; }
 
-.footer-top__right > p {
-  display: block;
+.footer-top {
+  margin-bottom: 100px; }
+
+.footer-top__right > .textblock {
+  grid-area: main;
+  max-width: 300px; }
+
+.footer-top__right > ul {
+  grid-area: footer;
+  padding-left: 0;
+  list-style: none; }
+
+.footer-top__right > ul li {
+  display: inline-block; }
+
+.footer-bottom {
+  display: grid;
+  grid-template: 1fr/1fr 1fr 1fr;
   width: 100%; }
+
+.footer-bottom__right ul {
+  grid-area: footer;
+  display: block;
+  padding-left: 0;
+  text-align: right; }
 
 .footer-bottom__right ul li {
   display: inline-block; }
+
+.footer-bottom__center {
+  text-align: center; }
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document

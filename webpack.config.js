@@ -11,6 +11,7 @@ const uglifyJS = require('./webpack/js.uglify');
 const images = require('./webpack/images');
 const postcss = require('./webpack/postcss');
 const babel = require('./webpack/babel');
+const optimizecss = require('./webpack/optimizecss');
 const autoprefixer = require('autoprefixer');
 
 const PATHS = {

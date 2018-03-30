@@ -74,37 +74,54 @@ form {
     }
 }
 
-.arrivals,
+.arrivals {
+    display: grid;
+}
+
+.aravials__one {
+    grid-area: one;
+}
+
+.aravials__two {
+    grid-area: two;
+}
+
+.aravials__three {
+    grid-area: three;
+}
+
+.aravials__four {
+    grid-area: four;
+}
+
 .baners {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0;
-    list-style: none;
-    & li {
-        display: inline-block;
-        text-align: center;
-    }
+    display: grid;
+}
+
+.baners__one {
+    grid-area: one;
+}
+
+.baners__two {
+    grid-area: two;
+}
+
+.baners__three {
+    grid-area: three;
+    width: 265px;
 }
 
 #footer {
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
+    padding-bottom: 10px;
 }
 
 .footer-top {
-    width: 100%;
-    display: flex;
-    grid-template-columns: 1fr 1fr;
+    display: grid;
 }
 
 .footer-top__left {
-    width: 50%;
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
-    justify-items: start;
+    grid-area: header1;
+    display: grid;
     & ul {
         display: block;
         // width: 265px;
@@ -114,11 +131,9 @@ form {
 }
 
 .footer-top__right {
-    padding-left: 59px;
-    width: 50%;
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
+    grid-area: header2;
+    display: grid;
+    // grid-template-rows: auto;
 }
 
 .quik_links {
@@ -130,22 +145,142 @@ form {
 }
 
 .questions {
+    grid-area: header1;
     width: 100%;
 }
 
 .order_by_phone {
+    grid-area: header2;
     width: 100%;
 }
 
-.footer-top__right>p {
-    display: block;
-    width: 100%;
+.footer-top {
+    margin-bottom: 100px;
+}
+
+.footer-top__right>.textblock {
+    grid-area: main;
+}
+
+.footer-top__right>ul {
+    grid-area: footer;
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-top__right>ul li {
+    display: inline-block;
 }
 
 .footer-bottom {
-    // width: 100%;
+    display: grid;
+    grid-template: 1fr/1fr 1fr 1fr;
+    width: 100%;
+}
+
+.footer-bottom__right ul {
+    grid-area: footer;
+    display: block;
+    padding-left: 0;
+    text-align: right;
 }
 
 .footer-bottom__right ul li {
     display: inline-block;
+}
+
+.footer-bottom__center {
+    text-align: center;
+}
+
+@media screen and (min-width: 881px) {
+    .footer-top {
+        grid-template: 1fr/1fr 1fr;
+        grid-template-areas: "header1 header2";
+    }
+    .footer-top__left {
+        grid-template: 1fr/ 1fr 1fr;
+        // justify-content: space-around;
+    }
+    .footer-top__right {
+        padding-left: 59px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "header1 header2" "main main" "footer footer";
+    }
+    .footer-top__right>.textblock {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .footer-top {
+        grid-template: 1fr 1fr/1fr;
+        grid-template-areas: "header1" "header2";
+    }
+    .footer-top__left {
+        grid-area: header1;
+        grid-template: 1fr/ 1fr 1fr;
+        // justify-content: space-around;
+    }
+    .quik_links {
+        text-align: center;
+    }
+    .castomer_care {
+        text-align: center;
+    }
+    .footer-top__right {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "header1 header2" "main main" "footer footer";
+    }
+    .questions {
+        text-align: center;
+    }
+    .order_by_phone {
+        text-align: center;
+    }
+    .footer-top__right>ul {
+        text-align: center;
+    }
+    .footer-top__right>.textblock {}
+}
+
+@media screen and (min-width: 1011px) {
+    .arrivals {
+        grid-template: 1fr/1fr 1fr 1fr 1fr;
+        grid-template-areas: "one two three four";
+        justify-content: space-between;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .arrivals {
+        grid-template: 1fr 1fr/1fr 1fr;
+        grid-template-areas: "one two" "three four";
+        justify-content: space-between;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1181px) {
+    .baners {
+        grid-area: 1fr/ 1fr 1fr 1fr;
+        grid-template-areas: "one two three";
+        justify-content: space-between;
+    }
+    .baners__three {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .baners {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "one" "two three";
+        justify-content: space-between;
+    }
+    .baners__three {
+        text-align: center;
+    }
 }
