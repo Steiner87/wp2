@@ -1,7 +1,7 @@
 #wrapper {
     margin: 0 auto;
     max-width: 1300px;
-    padding: 0 60px;
+    padding: 0 10px;
 }
 
 .header__top {
@@ -11,7 +11,9 @@
 }
 
 #header {
+    margin: 0 auto;
     padding-top: 31px;
+    max-width: 1180px;
 }
 
 .header {
@@ -36,14 +38,15 @@
 
 .header__bottom {
     display: grid;
-    grid-template-columns: minmax(550px, 915px) 120px;
+    grid-gap: 147px;
+    grid-template-columns: 5fr 118px;
+    // grid-template-columns: minmax(550px, 915px) 120px;
     justify-content: space-between;
 }
 
 .menu {
     display: flex;
     flex-direction: row;
-    // width: 100%;
     padding-left: 0;
     justify-content: space-between;
     & li {
@@ -66,6 +69,8 @@ form {
 }
 
 #main {
+    margin: 0 auto;
+    max-width: 1180px;
     & h1 {
         text-align: center;
     }
@@ -86,6 +91,10 @@ form {
     grid-area: two;
 }
 
+.aravials__two img {
+    // width: 100%;
+}
+
 .aravials__three {
     grid-area: three;
 }
@@ -102,16 +111,28 @@ form {
     grid-area: one;
 }
 
+.baners__one img {
+    width: 100%;
+}
+
 .baners__two {
     grid-area: two;
+    text-align: center;
+}
+
+.baners__two img {
+    width: 100%;
 }
 
 .baners__three {
+    text-align: center;
     grid-area: three;
-    width: 265px;
+    // width: 265px;
 }
 
 #footer {
+    margin: 0 auto;
+    max-width: 1180px;
     padding-bottom: 10px;
 }
 
@@ -253,7 +274,7 @@ form {
     }
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (min-width: 415px) and (max-width: 1010px) {
     .arrivals {
         grid-template: 1fr 1fr/1fr 1fr;
         grid-template-areas: "one two" "three four";
@@ -264,7 +285,7 @@ form {
 
 @media screen and (min-width: 1181px) {
     .baners {
-        grid-area: 1fr/ 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "one two three";
         justify-content: space-between;
     }
@@ -273,14 +294,43 @@ form {
     }
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (min-width: 1001px) {
+    .menu {}
+}
+
+@media screen and (max-width: 1000px) {
+    .menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 415px) and (max-width: 1180px) {
     .baners {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "one" "two three";
-        justify-content: space-between;
+        grid-template-areas: "one one" "two three";
+        justify-content: space-around;
     }
     .baners__three {
+        width: 100%;
         text-align: center;
+    }
+    .baners__one {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .arrivals {
+        text-align: center;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "one" "two" "three" "four";
+        justify-content: space-around;
+    }
+    .baners {
+        grid-template-areas: "one" "two" "three";
+        justify-content: space-around;
+    }
+    .baners__three {
+        height: 385px;
     }
 }
